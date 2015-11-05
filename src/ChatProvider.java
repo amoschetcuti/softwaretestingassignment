@@ -9,6 +9,7 @@ public class ChatProvider
 {
 	String provider_name = "Test Provider";
 	List<User> users = new ArrayList<>();
+	int maxMessageLength = 100;
 	
 	public int chatProvider(String username, String password)
 	{
@@ -63,19 +64,17 @@ public class ChatProvider
         }        
         catch (SQLException e)
         {
-            e.printStackTrace();
+            //e.printStackTrace();
         }
         
         return num;
 	}
 	
-//	public void getMaxMessageLength()
-//	{
-//		
-//	}
-	
-	
-	
+	public int getMaxMessageLength()
+	{
+		return maxMessageLength;
+	}
+		
 	public String getName()
 	{
 		return provider_name;
